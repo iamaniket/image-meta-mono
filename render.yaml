@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: image-meta-backend
+    env: node
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: GOOGLE_GEMINI_API_KEY
+        sync: false
+    buildCommand: |
+      npm ci --omit=optional --no-audit --no-fund
+      npx nx build backend -c production
+      cd dist/backend
+      npm ci --omit=dev --no-audit --no-fund
+    startCommand: node dist/backend/main.js
+
