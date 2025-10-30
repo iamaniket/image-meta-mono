@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Dental Image Analyzer",
+  "name": "Media Analyzer",
   "version": "0.1.0",
   "description": "Upload or capture an image and get a Gemini-powered description.",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Dental Analyzer"
+    "default_title": "Media Analyzer"
   },
   "permissions": [
     "activeTab",

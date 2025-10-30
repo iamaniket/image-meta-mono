@@ -1,1 +1,64 @@
-/* Your styles goes here. */
+/* Basic button styling for popup */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  background: #ffffff;
+  color: #24292f;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.button:not(.primary):hover {
+  background: #f6f8fa;
+}
+
+.primary {
+  background: #1f6feb;
+  color: white;
+  border-color: #1f6feb;
+}
+
+.primary:hover {
+  background: #1a61cf; /* slightly darker */
+  border-color: #1a61cf;
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fileInput {
+  display: none;
+}
+
+.heading {
+  margin: 0 0 8px 0;
+}
+
+.result {
+  white-space: pre-wrap;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grow {
+  flex: 1 1 0;
+}
+
+.preview {
+  margin-top: 8px;
+  border: 1px solid #eaeef2;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 4px;
+}
